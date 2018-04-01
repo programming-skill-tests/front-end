@@ -24,3 +24,5 @@ Fill the form and click on 'Save' button. Information is saved and grid view is 
 
 ### Work flow
 ![Workflow](challenge1/workflow.png)
+
+# TODO: Will add more challenges
