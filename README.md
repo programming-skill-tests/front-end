@@ -2,7 +2,8 @@
 This repo has challenges related to Web UI development using UI frameworks like angular,react or vue.
 
 ## Pre-requisites
-Install [Json Server](https://github.com/typicode/json-server)
+1. Install Node and npm
+2. Install [Json Server](https://github.com/typicode/json-server)
 
 # Challenge 1
 ## View grid of movies
