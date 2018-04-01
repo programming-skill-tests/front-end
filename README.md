@@ -20,7 +20,7 @@ Solve any 1 challenge with following checklist
 #### Click on 'Add New', to open movie form.
 ![Page-2](challenge1/page2.png)
 
-Fill the form and click on SAVE button. Information is saved and grid view is displayed with latest data.
+Fill the form and click on 'Save' button. Information is saved and grid view is displayed with latest data. Click on 'Cancel' button to come back to Grid view.
 
 ### Work flow
 ![Workflow](challenge1/workflow.png)
