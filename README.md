@@ -3,7 +3,7 @@ This repo has challenges related to Web UI development using UI frameworks like 
 
 ## Instructions 
 Solve any 1 challenge with following checklist
-1. Fork this repo
+1. Fork [this](https://github.com/programming-skill-tests/front-end) repo
 2. Develop the features shown in the workflow using [angular5](https://angular.io/guide/quickstart)
 3. Create [unit test](https://angular.io/guide/testing) cases to all the classes.
 4. Publish the code coverage report in Readme file.
