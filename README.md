@@ -10,7 +10,7 @@ Solve any 1 challenge with following checklist of instructions
 5. Raise a [Pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) to this repo from forked repo.
 
 ## Pre-requisites
-1. Install Node and npm
+1. Install [Node and npm](https://nodejs.org/en/download/)
 2. Install [Json Server](https://github.com/typicode/json-server)
 3. Install [angular-cli](https://cli.angular.io/)
 
