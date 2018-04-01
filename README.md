@@ -1,5 +1,8 @@
-# front-end
-Repo with challenges related to Web UI Client development
+# Web UI Development challenges
+This repo has challenges related to Web UI development using UI frameworks like angular,react or vue.
+
+## Pre-requisites
+Install [Json Server](https://github.com/typicode/json-server)
 
 # Challenge 1
 ## View grid of movies
@@ -8,3 +11,6 @@ Repo with challenges related to Web UI Client development
 ![Page-2](challenge1/page2.png)
 
 Fill the form and click on SAVE button. Information is saved and grid view is displayed with latest data.
+
+## Work flow
+![Workflow](challenge1/workflow.png)
