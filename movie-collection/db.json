@@ -1,0 +1,20 @@
+{
+  "film_details": [
+    {
+      "id": 1,
+      "title": "Ready Player One",
+      "director": "Steven Spielberg",
+      "genre": "Action",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "selected": false
+    },
+    {
+      "id": 2,
+      "title": "Black Panther",
+      "director": "Ryan Coogler",
+      "genre": "Action",
+      "cast": "Chadwick Boseman/Michael B. Jordan",
+      "selected": false
+    }
+  ]
+}
