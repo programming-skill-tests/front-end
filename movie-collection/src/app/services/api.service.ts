@@ -8,7 +8,6 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 
 const API_URL = environment.apiUrl;
-console.log(API_URL);
 
 @Injectable()
 export class ApiService {
@@ -40,7 +39,7 @@ export class ApiService {
   //Updating existing film details
   public updateFilm(film: Film): Observable<Film> {
     return this.http
-      .put(API_URL + '/film_details/' + film.id, film)
+      .put(API_URL + '/film_details/' + film["id"], film)
       .map(response => {
         const films = response.json();
         return films;

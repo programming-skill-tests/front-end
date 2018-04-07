@@ -48,7 +48,7 @@ export class FilmdetailsComponent implements OnInit {
 
   delete_films(){
     for(var i=0;i<this.selectedrows.length;i++){
-      this.films = this.films.filter((t) => t.id !== this.selectedrows[i]);
+      this.films = this.films.filter((t) => t["id"] !== this.selectedrows[i]);
       this.filmDataService
       .removeFilm(this.selectedrows[i])
       .subscribe(
@@ -64,12 +64,12 @@ export class FilmdetailsComponent implements OnInit {
     for (var i = 0; i < this.films.length; i++) {
       this.films[i].selected = this.selectedAll;
       if(e.target.checked){
-        if (this.selectedrows.indexOf(JSON.stringify(this.films[i].id)) == -1) {
-          this.selectedrows.push(JSON.stringify(this.films[i].id));
+        if (this.selectedrows.indexOf(JSON.stringify(this.films[i]["id"])) == -1) {
+          this.selectedrows.push(JSON.stringify(this.films[i]["id"]));
         }
       }
       if(!e.target.checked){
-          const index: number = this.selectedrows.indexOf(JSON.stringify(this.films[i].id))
+          const index: number = this.selectedrows.indexOf(JSON.stringify(this.films[i]["id"]))
           if (index !== -1) {
             this.selectedrows.splice(index,1);
           }

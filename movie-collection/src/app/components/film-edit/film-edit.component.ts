@@ -46,6 +46,7 @@ export class FilmEditComponent implements OnInit {
   
   //Saving Updated film details
   save(value){
+    value["selected"]=false;
     this.filmDataService.updateFilm(value)
     .subscribe(
       (newfilm) => {
