@@ -1,3 +1,18 @@
+# Solution of the Web UI Challenge
+
+## Screenshots
+
+![Page 1](Snaps/Page1.PNG)
+
+
+![Page 1](Snaps/Page2.PNG)
+
+## Known Issues (Working on them)
+1. Documentation is not complete.
+2. Unit Tests are not complete.
+3. Form Validation is not done.
+
+
 # MovieDetails
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
