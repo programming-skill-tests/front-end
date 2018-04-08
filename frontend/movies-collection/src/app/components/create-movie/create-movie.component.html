@@ -1,0 +1,53 @@
+<h2>Add New Movie</h2>
+<div>
+    <form #movieForm="ngForm" (ngSubmit)="createMovieData(movieForm)" novalidate>
+        <div class="row">
+            <b>Title</b>
+            <input type="text" id="name" class="form-control" placeholder="Bahubali" required name="title" [(ngModel)]="newMovieData.title"
+                #name="ngModel" (input)="onSearchChange()" >
+            <div *ngIf="title?.errors && title?.dirty" class="alert alert-danger">
+                <div [hidden]="!title.errors.required">
+                    Title is required.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+        <b>Director</b>
+        <select name="director" class="form-control" required name="director" #name="ngModel" [(ngModel)]="newMovieData.director">
+            <option [ngValue]="undefined" disabled  selected>Select</option> -->
+            <option *ngFor="let director of directors" [value]="director.value">  
+            {{director.display}}
+            </option>
+        </select>
+        </div>
+
+         <div class="row">
+            <b>Cast</b>
+            <textarea autoGrow id="cast" class="form-control text-comment" placeholder="Prabhas Anushka" required name="cast" [(ngModel)]="newMovieData.cast"
+                #cast="ngModel" (input)="onSearchChange()" ></textarea>
+            <div *ngIf="cast?.errors && cast?.dirty" class="alert alert-danger">
+                <div [hidden]="!cast.errors.required">
+                    Cast is required.
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <b>Genre</b>
+            <input type="hidden" name="toggle" [(ngModel)]="newMovieData.genre">
+          
+                <div *ngFor ="let movieTypeValue of movieType">
+                    <input type="checkbox" multiple id="movieTypeValue.id" (click)="toggleSelection($event,movieTypeValue.id)" [checked]="newMovieData.genre === movieTypeValue.value">
+                     
+                    {{ movieTypeValue.display }}
+                </div>
+                <br>
+            
+        </div>
+        <div class="row">
+                <input style='margin-right:16px' type="submit" value="Save" class="btn btn-success" [disabled]="!movieForm.valid">
+                <button type="button"  class="btn btn-danger" routerLink="/moviesList"> Cancel</button>
+        </div>
+    </form>
+</div>
