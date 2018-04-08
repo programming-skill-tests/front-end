@@ -1,28 +1,21 @@
-# Web UI Development challenges
-This repo has challenges related to Web UI development using UI frameworks like angular.
+# movie-collection
 
-## Instructions 
-Solve any 1 challenge with following checklist of instructions
-1. Fork [this](https://github.com/programming-skill-tests/front-end) repo
-2. Develop the features shown in the workflow using [angular5](https://angular.io/guide/quickstart) in movie-collection project.
-3. Create [unit test](https://angular.io/guide/testing) cases to all the classes.
-4. Publish the code coverage report in Readme file (in forked repo).
-5. Raise a [Pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) to this repo from forked repo.
+######Front End#######
+Versions Used
+npm - 5.5.1
+node - v9.0.0
+Angular CLI - 1.7.1
 
-## Pre-requisites
-1. Install [Node and npm](https://nodejs.org/en/download/)
-2. Install [Json Server](https://github.com/typicode/json-server)
-3. Install [angular-cli](https://cli.angular.io/)
 
-### Challenge 1
-#### View grid of movies
-![Page-1](challenge1/page1.png)
-#### Click on 'Add New', to open movie form.
-![Page-2](challenge1/page2.png)
+######Back End########
+jdk - 1.8.0_161
 
-Fill the form and click on 'Save' button. Information is saved and grid view is displayed with latest data. Click on 'Cancel' button to come back to Grid view.
 
-### Work flow
-![Workflow](challenge1/workflow.png)
-
-# TODO: Will add more challenges
+####Steps to run the application####
+1. pull the repository
+2. import the backend to STS IDE and run the application
+3. Open the frontend application in Visual Studio tool
+4. Run the command "npm install"
+5. Start the application with "ng serve"
+6. Test the application with "ng test"
+7. Find the code coverage report in "screenshots" folder.
