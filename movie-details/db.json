@@ -1,0 +1,33 @@
+
+{
+  "movies-data": [
+    {
+      "id": 1,
+      "title": "PK",
+      "director": "Rajkumar Hirani",
+      "cast": "Aamir Khan , Anushka Sharma",
+      "genre": "Comedy"
+    },
+    {
+      "id": 2,
+      "title": "Padmaavat",
+      "director": "Sanjay Leela Bhansali",
+      "cast": "Deepika Padukone,Ranveer Singh,Shahid Kapoor",
+      "genre": "Action , Drama"
+    }
+  ],
+  "directors": [
+    {
+      "name": "Rajkumar Hirani"
+    },
+    {
+      "name": "Rohit Setty"
+    },
+    {
+      "name": "Karan Johar"
+    },
+    {
+      "name": "Sanjay Leela Bhansali"
+    }
+  ]
+}

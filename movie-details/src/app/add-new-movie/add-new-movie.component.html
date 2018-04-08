@@ -1,0 +1,28 @@
+
+<form action="#" id="formview">
+  <h4 id="formheading">Add New Movie</h4>		
+  <label for="Title">Title</label><br>
+  <input type="text" name="Title" id="Title" #title ><br>
+  <label for="Director">Director</label><br>
+  <select #director>
+    <Option>Select</Option>
+    <Option>Rohit Setty</Option>
+    <Option>Karan Johar</Option>
+    <Option>Sanjay Leela Bhansali</Option>
+    <Option>Mastan-Abbas</Option>
+  </select>
+  <br>
+  <label for="Cast">Cast</label><br>
+  <textarea class="#" rows="5" id="cast" #cast></textarea><br>
+  <label for="Genre">Genre</label><br>
+  <input type="checkbox" name="Action" id="Action" #cb value="Action">
+  <label for="Action" >Action</label><br>
+  <input type="checkbox" name="Comedy" id="Comedy" value="Comedy">
+  <label for="Comedy" >Comedy</label><br>
+  <input type="checkbox" name="Drama" id="Drama" value="Drama">
+  <label for="Drama" >Drama</label><br>
+  <input type="checkbox" name="Horror" id="Horror" value="Horror">
+  <label for="Horror" >Horror</label><br> 
+  <button type="button" id="Cancelbut" >Cancel</button>
+  <input type="submit" value="Submit" (click)="setData(title.value,director.value,cast.value)">
+</form>
