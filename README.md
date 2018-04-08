@@ -12,10 +12,10 @@ Solve any 1 challenge with following checklist of instructions
 
 ### Challenge 1
 #### View grid of movies
-![Page-1](challenge1/gridview.png)
+![Page-1](challenge1/gridview.PNG)
 #### 'Add New', to open movie form.
-![Page-2](challenge1/add_film.png)
+![Page-2](challenge1/add_film.PNG)
 #### 'Edit Movie', to edit movie.
-![Page-2](challenge1/edit_movie.png)
+![Page-2](challenge1/edit_movie.PNG)
 
 
