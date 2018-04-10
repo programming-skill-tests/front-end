@@ -20,10 +20,15 @@ public class MovieListService {
 	
 	@Autowired
 	MoviesRepository moviesRepository;
+	
 	private Long deleteId;
 	final boolean result = false;
 	
 	
+	/**
+	 * @return movieList
+	 * This method will return the list of movies information available in the database.
+	 */
 	public List<Movie> getMovies() {
 		List<Movie> movieList = new ArrayList<Movie>();
 		try {
@@ -36,15 +41,24 @@ public class MovieListService {
 
 	
 	
-	public Movie createMovie(Movie employee) {
-		if(employee!=null) {
-			return moviesRepository.save(employee);
+	/**
+	 * @param employee
+	 * This method is used to save the movie information to the database. 
+	 */
+	public Movie createMovie(Movie movie) {
+		if(movie!=null) {
+			return moviesRepository.save(movie);
 		}
 		return null;
 	}
 	
 	
 	
+	/**
+	 * @param movieId
+	 * This method takes an input put movieId as input string and later it will parsed based on the comma separation values.
+	 * Each item will be deleted, which will be selected by the user.
+	 */
 	public ResponseEntity<Movie> deleteMovie(String movieId) {
 		try {
 			if(movieId!=null && !movieId.isEmpty()) {
@@ -75,7 +89,12 @@ public class MovieListService {
 	}
 	
 	
-	 public boolean delete(Long id) {
+	 /**
+	 * @param id
+	 * @return true/false
+	 * This method is used to check, whether the movie is deleted or not.
+	 */
+	public boolean delete(Long id) {
 	        Movie movie = findMovie(id);
 	        if (movie != null) {
 	        	moviesRepository.delete(movie);
@@ -86,7 +105,13 @@ public class MovieListService {
 	        }
 	        return true;
 	   }	
-	 public Movie findMovie(Long id) {
+	 
+	 /**
+	 * @param id
+	 * @return movie
+	 * This method is used to get the movie information for the selected movie by passing the id.
+	 */
+	public Movie findMovie(Long id) {
 	 	Movie movie = moviesRepository.findOne(id);
 	 	return movie;
 	 }

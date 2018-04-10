@@ -1,11 +1,11 @@
-<h1>Movie Collection</h1>
-<div *ngIf="moviesList.length != 0">
+<h1>{{title}}</h1>
+<div class="list" *ngIf="moviesList.length != 0" >
     <br>
     <button type="button" class="btn btn-primary" routerLink="/createMovieData">Add New</button>
             
     <button type="button" class="btn btn-danger" (click)="deleteEmployee()">Delete</button>
     <br><br>
-    <table class="table table-striped table-bordered table-hover">
+    <table class="table table-striped table-bordered table-hover" id="table">
         <thead style="background-color:#6b6c6d;color:#fff;border:1px solid">
             <th><input type="checkbox" (change)="selectAll($event)"></th>
             <th>Movie</th>

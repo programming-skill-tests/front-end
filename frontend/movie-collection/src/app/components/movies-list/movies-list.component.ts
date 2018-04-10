@@ -10,7 +10,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @Component({
   selector: 'app-movies-list',
   templateUrl: './movies-list.component.html',
-  styleUrls: ['./movies-list.component.css']
+  styleUrls: ['./movies-list.component.css'],
+  
 })
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -19,6 +20,7 @@ export class MovieListComponent implements OnInit {
 
   constructor(private movieService: MovieService, private router: Router) { }
   private baseUrl = 'http://localhost:4200';
+  title: string = "Movie Collection";
 
   moviesList: Movie[] = [];
   

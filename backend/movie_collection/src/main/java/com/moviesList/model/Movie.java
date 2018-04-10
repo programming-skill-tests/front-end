@@ -15,6 +15,9 @@ import javax.persistence.Table;
 @Table(name = "movie")
 public class Movie {
 	
+	/**
+	 * The GeneratedValue annotation applied to a primary key property or field of an entity Movie in conjunction with the Id annotation.
+	 */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;

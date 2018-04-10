@@ -45,7 +45,6 @@ public class MoviesListController {
 	 */
 	@GetMapping("/moviesList")
 	public List<Movie> getMoviesList() {
-		
 		return movieListService.getMovies();
 	}
 

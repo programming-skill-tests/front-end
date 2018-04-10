@@ -34,6 +34,11 @@ import com.moviesList.model.Movie;
 import com.moviesList.repository.MoviesRepository;
 import com.moviesList.service.MovieListService;
 
+/**
+ * @author bnarasim
+ * This class is used to unit test the methods available in the controller class.
+ *
+ */
 @RunWith(SpringRunner.class)
 @WebMvcTest(value = MoviesListController.class,secure=false)
 public class MoviesListControllerTest {
@@ -54,11 +59,18 @@ public class MoviesListControllerTest {
 	 	private String expectedJson = null;
 	 	private String URI = null;
 
+	 	/**
+	 	 * This method will be doing initial test build setup.
+	 	 */
 	 	@Before
 	    public void setUp() {
 	        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 	    }
 	 	
+	 	/**
+	 	 * @throws Exception
+	 	 * This method is used to test whether the list of movies are getting or not in the given URI.
+	 	 */
 	 	@Test
 	    public void testGetMovies() throws Exception {
 		 	Movie movie1 = new Movie();
@@ -92,6 +104,10 @@ public class MoviesListControllerTest {
 	    }
 	 	
 	 	
+	 	/**
+	 	 * @throws Exception
+	 	 * This method is used to test whether the movie information is properly creating or not.
+	 	 */
 	 	@Test
 	    public void testCreateMovie() throws Exception {
 		 	Movie movie = new Movie();
@@ -114,6 +130,10 @@ public class MoviesListControllerTest {
 		 	assertEquals(HttpStatus.OK.value(), response.getStatus());
 	    }
 	 
+	 	/**
+	 	 * @throws Exception
+	 	 * This method is used to test whether the selected movie is deleted or not.
+	 	 */
 		@Test
 	    public void testDeleteMovie() throws Exception {
 		 	Movie movie = new Movie();
@@ -124,6 +144,11 @@ public class MoviesListControllerTest {
 	    }
 
 	   	
+	 	/**
+	 	 * @param object
+	 	 * @throws JsonProcessingException
+	 	 * This method is used to convert the given object in to json string.
+	 	 */
 	 	private String mapToJson(Object object) throws JsonProcessingException{
 	 		ObjectMapper objectMapper =  new ObjectMapper();
 	 		return objectMapper.writeValueAsString(object);
