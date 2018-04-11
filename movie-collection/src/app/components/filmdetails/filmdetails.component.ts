@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiDataService } from '../../services/apidata.service';
+import { ApiService } from '../../services/api.service';
 import { Film } from "../../models/film";
 
 @Component({
   selector: 'app-filmdetails',
   templateUrl: './filmdetails.component.html',
   styleUrls: ['./filmdetails.component.css'],
-  providers: [ApiDataService]
+  providers: [ApiService]
 })
 export class FilmdetailsComponent implements OnInit {
 
@@ -14,7 +14,7 @@ export class FilmdetailsComponent implements OnInit {
   selectedrows: any[]=[];
   selectedAll: any;
 
-  constructor(private filmDataService: ApiDataService) { }
+  constructor(private filmDataService: ApiService) { }
   
   ngOnInit() {
     this.getFilms();
@@ -23,7 +23,7 @@ export class FilmdetailsComponent implements OnInit {
   
   getFilms(){
     this.filmDataService
-      .getAllFilms()
+      .getAllFilmdetails()
       .subscribe(
         (films) => {
           this.films = films;
@@ -50,7 +50,7 @@ export class FilmdetailsComponent implements OnInit {
     for(var i=0;i<this.selectedrows.length;i++){
       this.films = this.films.filter((t) => t["id"] !== this.selectedrows[i]);
       this.filmDataService
-      .removeFilm(this.selectedrows[i])
+      .deleteFilm(this.selectedrows[i])
       .subscribe(
         (_) => {
           this.getFilms();

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { ApiDataService } from '../../services/apidata.service';
+import { ApiService } from '../../services/api.service';
 import { Film } from "../../models/film";
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-film-edit',
   templateUrl: './film-edit.component.html',
-  styleUrls: ['./film-edit.component.css']
+  styleUrls: ['./film-edit.component.css'],
+  providers: [ApiService]
 })
 export class FilmEditComponent implements OnInit {
   filmForm: FormGroup;
@@ -19,7 +20,7 @@ export class FilmEditComponent implements OnInit {
   ];
 
   film = {}
-  constructor(private fb: FormBuilder,private filmDataService: ApiDataService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private fb: FormBuilder,private filmDataService: ApiService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     //Editting form declration
@@ -36,7 +37,7 @@ export class FilmEditComponent implements OnInit {
 
   getFilm(id){
     this.filmDataService
-      .getFilm(id)
+      .getFIlm(id)
       .subscribe(
         (film) => {
           this.film = film;
@@ -46,8 +47,9 @@ export class FilmEditComponent implements OnInit {
   
   //Saving Updated film details
   save(value){
+    var id=value["id"]
     value["selected"]=false;
-    this.filmDataService.updateFilm(value)
+    this.filmDataService.updateFilm(id,value)
     .subscribe(
       (newfilm) => {
         this.router.navigate(['/filmdetails']);

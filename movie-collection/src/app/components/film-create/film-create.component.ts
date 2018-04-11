@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { ApiDataService } from '../../services/apidata.service';
+import { ApiService } from '../../services/api.service';
 import { Film } from "../../models/film";
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   selector: 'app-film-create',
   templateUrl: './film-create.component.html',
   styleUrls: ['./film-create.component.css'],
-  providers: [ApiDataService]
+  providers: [ApiService]
 })
 export class FilmCreateComponent implements OnInit {
   filmForm: FormGroup;
@@ -19,7 +19,7 @@ export class FilmCreateComponent implements OnInit {
     {name: 'Joss Whedon'}
   ];
   
-  constructor(private fb: FormBuilder,private filmDataService: ApiDataService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private fb: FormBuilder,private filmDataService: ApiService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.filmForm = this.fb.group({
@@ -34,7 +34,7 @@ export class FilmCreateComponent implements OnInit {
   //Saving new film details
   save(value){
     value["selected"]=false;
-    this.filmDataService.addFilm(value)
+    this.filmDataService.AddFilm(value)
     .subscribe(
       (newfilm) => {
         this.router.navigate(['/filmdetails']);
