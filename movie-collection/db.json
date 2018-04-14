@@ -3,18 +3,10 @@
     {
       "title": "Ready Player two",
       "director": "Steven Spielberg",
-      "genre": "Action",
       "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
       "selected": false,
       "id": 1
-    },
-    {
-      "title": "Black Panther Two",
-      "director": "Ryan Coogler",
-      "genre": "Action",
-      "cast": "Chadwick Boseman/Michael B. Jordan",
-      "selected": false,
-      "id": 2
     }
   ]
 }

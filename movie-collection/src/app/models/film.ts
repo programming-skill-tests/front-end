@@ -5,6 +5,7 @@ export class Film {
         public genre: string;
         public cast: string;
         public selected: false; //for selecting purpose
+ 		public id: number;	
         constructor(values: Object = {}) {
             Object.assign(this, values);
           }

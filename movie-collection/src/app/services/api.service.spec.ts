@@ -53,7 +53,7 @@ describe('ApiService', () => {
 	      expect(data).toEqual(film1);
 	    });
       // expect(service.getFIlm(2)).toEqual(film2);
-      service.getFIlm(1).subscribe((data) => {
+      service.getFIlm(2).subscribe((data) => {
 	      expect(data).toEqual(film2);
 	    });
     }));
@@ -109,17 +109,17 @@ describe('ApiService', () => {
       service.AddFilm(film);
       // let updatedFilm = service.updateFilm(1,{title: "Ready Player two"});
       // expect(updatedFilm.title).toEqual('Ready Player two');
-      service.updateFilm(1,{title: "Ready Player two",director: "Steven Spielberg", genre: "Action", cast: "Olivia Cooke/Tye Sheridan", selected: false}).subscribe((data) => {
+      service.updateFilm(1,{title: "Ready Player two"}).subscribe((data) => {
 	      expect(data.title).toEqual('Ready Player two');
 	    });
     }));
 
-    it('should return null if film is not found', inject([ApiService], (service: ApiService) => {
+    it('should return null if film is not fousd', inject([ApiService], (service: ApiService) => {
       let film = new Film({title: "Black Panther", director: "Ryan Coogler", genre: "Action", cast: "Chadwick Boseman/Michael B. Jordan", selected: false});
       service.AddFilm(film);
       // let updatedFilm = service.updateFilm(2,{title: "Black Panther Two"});
       // expect(updatedFilm).toEqual(null);
-      service.updateFilm(2,{title: "Black Panther Two", director: "Ryan Coogler", genre: "Action", cast: "Chadwick Boseman/Michael B. Jordan", selected: false}).subscribe((data) => {
+      service.updateFilm(15,{title: "Black Panther Two"}).subscribe((data) => {
 	      expect(data).toEqual(null);
 	    });
     }));

@@ -22,7 +22,7 @@
                     <form [formGroup]="filmForm" (ngSubmit) = "save(filmForm.value)">
                           <div class="form-group">
                             <label class="center-block">Id</label>
-                              <input class="form-control input-disabled" readonly="true" [(ngModel)]="film.id" formControlName="id">
+                              <input class="form-control input-disabled"  [(ngModel)]="film.id" formControlName="id">
                           </div>
                           <div class="form-group">
                             <label class="center-block">Name</label>

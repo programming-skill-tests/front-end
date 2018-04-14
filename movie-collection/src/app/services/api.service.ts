@@ -37,9 +37,9 @@ export class ApiService {
   }
 
   //Updating existing film details
-  public updateFilm(filmId: number,film: Film): Observable<Film> {
+  public updateFilm(filmId: number,data): Observable<Film> {
     return this.http
-      .put(API_URL + '/film_details/' + filmId, film)
+      .patch(API_URL + '/film_details/' + filmId, data)
       .map(response => {
         const film = response.json();
         return film;
