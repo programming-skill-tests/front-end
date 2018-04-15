@@ -42,6 +42,7 @@ export class ApiService {
       .patch(API_URL + '/film_details/' + filmId, data)
       .map(response => {
         const film = response.json();
+        console.log(response.json())
         return film;
       })
       .catch(this.handleError);

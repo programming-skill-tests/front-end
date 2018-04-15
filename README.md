@@ -16,6 +16,8 @@ Solve any 1 challenge with following checklist of instructions
 #### 'Add New', to open movie form.
 ![Page-2](challenge1/add_film.PNG)
 #### 'Edit Movie', to edit movie.
-![Page-2](challenge1/edit_movie.PNG)
+![Page-3](challenge1/edit_movie.PNG)
+#### 'CODE COVERAGE REPORT', 
+![Page-4](challenge1/code_coverage.PNG)
 
 
