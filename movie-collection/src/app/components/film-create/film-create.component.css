@@ -1,0 +1,30 @@
+.panel-body{
+    width: 100%;
+}
+.error{
+    color: #982e2e;
+}
+.text-right{
+    width: 100%;
+}
+.center-block {
+    padding-bottom: 8px;
+}
+.genre_label{
+    font-size: 1.5rem;
+    padding-left: 11px;
+    font-family: inherit
+}
+.checkbox_container{
+    padding: 5px;
+}
+input[type="radio"] {
+  -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
+  -moz-appearance: checkbox;    /* Firefox */
+}
+.panel{
+    width: 50%;
+}
+
+
+

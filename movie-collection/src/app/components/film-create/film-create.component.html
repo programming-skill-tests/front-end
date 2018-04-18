@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="row">
+    
+      <p></p>
+      <p> </p><p> </p>
+      <div class="col-md-2"></div>
+      <div class="col-md-8 col-md-offset-1">
+  
+          <div class="panel panel-default panel-table">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col col-xs-6">
+                  <p class="heading">
+                  Add New Movie
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body">
+                <div>
+                  <!-- Form for adding new film details -->
+                    <form [formGroup]="filmForm" (ngSubmit) = "save(filmForm.value)">
+                          <div class="form-group">
+                            <label class="center-block">Name</label>
+                              <input class="form-control" formControlName="title">
+                          </div>
+                          <div *ngIf="filmForm.controls['title'].invalid && (filmForm.controls['title'].dirty || filmForm.controls['title'].touched)" class="error">
+                              <div *ngIf="filmForm.controls['title'].errors.required">
+                              Name is required.
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label class="center-block">Director</label>
+                                <select class="form-control" formControlName="director">
+                                  <option value="">Select a Director</option> 
+                                  <option *ngFor="let dir of Directors" [ngValue]="dir.name">
+                                    {{ dir.name }}
+                                  </option>
+                                </select>
+                          </div>
+                          <div *ngIf="filmForm.controls['director'].invalid && (filmForm.controls['director'].dirty || filmForm.controls['director'].touched)" class="error">
+                              <div *ngIf="filmForm.controls['director'].errors.required">
+                              Director is required.
+                            </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="center-block">Cast</label>
+                                  <textarea class="form-control" formControlName="cast"></textarea>
+                              
+                            </div>
+                            <div *ngIf="filmForm.controls['cast'].invalid && (filmForm.controls['cast'].dirty || filmForm.controls['cast'].touched)" class="error">
+                              <div *ngIf="filmForm.controls['cast'].errors.required">
+                                Cast is required.
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <label class="center-block">Genre</label>
+                                <div class="checkbox_container">
+                                  <input type="radio" value="Action" formControlName="genre">
+                                  <label  class="genre_label" for="action">Action</label> 
+                                </div>
+                                <div class="checkbox_container">
+                                  <input type="radio" value="Comedy" formControlName="genre"/> 
+                                  <label class="genre_label" for="comedy">Comedy</label> 
+                                </div>  
+                                <div class="checkbox_container">
+                                  <input type="radio" value="Drama" formControlName="genre"/>
+                                  <label class="genre_label" for="drama">Drama</label> 
+                                </div>
+                                <div class="checkbox_container">
+                                  <input type="radio" value="Horror" formControlName="genre"/> 
+                                  <label class="genre_label" for="horror">Horror</label> 
+                                </div>
+                            </div>
+                            <div *ngIf="filmForm.controls['genre'].invalid && (filmForm.controls['genre'].dirty || filmForm.controls['genre'].touched)" class="error">
+                              <div *ngIf="filmForm.controls['genre'].errors.required">
+                                Genre is required.
+                              </div>
+                            </div>
+                          <div class="col col-xs-6 text-right">
+                            <a [routerLink]="['/filmdetails']" class="btn btn-sm btn-danger btn-create" >
+                              cancel
+                            </a>
+                            <button type="submit" class="btn btn-primary" [disabled]="!filmForm.valid">
+                                Save
+                            </button>
+                          </div>
+                          
+                    </form>
+                  </div>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>

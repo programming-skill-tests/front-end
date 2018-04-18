@@ -1,0 +1,116 @@
+{
+  "film_details": [
+    {
+      "title": "Ready Player two",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 1
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 2
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 3
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 4
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 5
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 6
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 7
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 8
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 9
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 10
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 11
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 12
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 13
+    },
+    {
+      "title": "test",
+      "director": "Steven Spielberg",
+      "cast": "Olivia Cooke/Tye Sheridan",
+      "genre": "Action",
+      "selected": false,
+      "id": 14
+    }
+  ]
+}

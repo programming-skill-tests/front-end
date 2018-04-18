@@ -9,20 +9,15 @@ Solve any 1 challenge with following checklist of instructions
 4. Publish the code coverage report in Readme file (in forked repo).
 5. Raise a [Pull request](https://help.github.com/articles/creating-a-pull-request-from-a-fork/) to this repo from forked repo.
 
-## Pre-requisites
-1. Install [Node and npm](https://nodejs.org/en/download/)
-2. Install [Json Server](https://github.com/typicode/json-server)
-3. Install [angular-cli](https://cli.angular.io/)
 
 ### Challenge 1
 #### View grid of movies
-![Page-1](challenge1/page1.png)
-#### Click on 'Add New', to open movie form.
-![Page-2](challenge1/page2.png)
+![Page-1](challenge1/gridview.PNG)
+#### 'Add New', to open movie form.
+![Page-2](challenge1/add_film.PNG)
+#### 'Edit Movie', to edit movie.
+![Page-3](challenge1/edit_movie.PNG)
+#### 'CODE COVERAGE REPORT', 
+![Page-4](challenge1/code_coverage.PNG)
 
-Fill the form and click on 'Save' button. Information is saved and grid view is displayed with latest data. Click on 'Cancel' button to come back to Grid view.
 
-### Work flow
-![Workflow](challenge1/workflow.png)
-
-# TODO: Will add more challenges
