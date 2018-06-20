@@ -11,15 +11,15 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 
 export class MoviesListComponent implements OnInit {
-  deleteSelection : String;
-  data: Observable<MovieData>;
+  deleteSelection : String[] = [];
+  data: MovieData[] = [];
   constructor(private movieService: MovieService,
     private router: Router,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.deleteSelection = new String();
-    this.data = this.movieService.getMoviesList();
+    this.movieService.getMoviesList().subscribe(res =>{
+      this.data = res});
   }
 
   addNew() {
@@ -29,14 +29,15 @@ export class MoviesListComponent implements OnInit {
   onSelectAll(event) {
     var checkboxes = document.getElementsByTagName('input');
     if (event.target.checked) {
-      this.deleteSelection = "all";
+      var j=0;
         for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].type == 'checkbox') {
                 checkboxes[i].checked = true;
+                this.deleteSelected[j++] = checkboxes[i].id;
             }
         }
     } else {
-      this.deleteSelection = "";
+      this.deleteSelection = [];
         for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].type == 'checkbox') {
                 checkboxes[i].checked = false;
@@ -46,35 +47,35 @@ export class MoviesListComponent implements OnInit {
   }
 
   deleteSelected() {
-    if(this.deleteSelection == 'all') {
-      this.data = this.movieService.deleteSelectedMovies(this.deleteSelection);
-    }
-    else {
       var checkboxes = document.getElementsByTagName('input');
+      var j=0;
       for (var i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].type == 'checkbox') {
-          if(checkboxes[i].checked) {
-            this.deleteSelection = checkboxes[i].id + ",";
+          if(checkboxes[i].checked && checkboxes[i].id != 'selectAll') {
+            this.deleteSelection[j++] = checkboxes[i].id;
           }
         }
       }
-      if(this.deleteSelection == '') {
+      if(this.deleteSelection.length == 0) {
         alert("Select at least one movie to delete!");
         return false;
       } 
-      else {
-        this.deleteSelection = this.deleteSelection.slice(0, -1);
+      for (var i = 0; i < this.deleteSelection.length; i++) {
+        this.movieService.deleteSelectedMovies(this.deleteSelection[i]).subscribe((response) => {
+            console.log("Deleted");         
+        });
       }
-      this.data = this.movieService.deleteSelectedMovies(this.deleteSelection);
-      this.deleteSelection = "";
-    }
+      for (var i = 0; i < this.deleteSelection.length; i++) {
+        this.data = this.data.filter(movie => movie.id != this.deleteSelection[i]);
+      }
+      this.deleteSelection = [];
   }
 
   onSelectCheckbox(event) {
     if(!event.target.checked) {
       var headerCheckBox = document.getElementById('selectAll') as HTMLInputElement;
       headerCheckBox.checked = false;
-      this.deleteSelection = "";
+      this.deleteSelection = [];
     }
   }
 

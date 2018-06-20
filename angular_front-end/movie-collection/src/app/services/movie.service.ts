@@ -6,21 +6,22 @@ import { MovieData } from '../models/movie.model';
 export class MovieService {
     constructor(private http: Http) { }
 
-    getMoviesList(): Observable<MovieData> {
-        return this.http.get('/api/movies/list')
-            .map((res: Response) => res.json()
-            ).catch((error:MovieData) => Observable.throw('Error'));
+    getMoviesList(): Observable<MovieData[]> {
+        return this.http.get('http://localhost:3000/movies')
+            .map(res => res.json()
+            ).catch(error => Observable.throw('Error'));
     }
     addNewMovie(movieData:MovieData) {
-        return this.http.post('/api/movies/add',movieData)
-            .map(res => <String>res.json())
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        let options = new RequestOptions({ headers: headers });
+        return this.http.post('http://localhost:3000/movies',movieData, options)
+            .map(res => <MovieData>res.json())
             .catch(res => {
                 return "Error";
             });
     }
-    deleteSelectedMovies(deleteSelection:String): Observable<MovieData> {
-        return this.http.post('/api/movies/delete',deleteSelection)
-            .map((res: Response) => res.json()
-            ).catch((error:MovieData) => Observable.throw('Error'));
+    deleteSelectedMovies(deleteSelection:String) {
+        return this.http.delete('http://localhost:3000/movies/' + deleteSelection).map((response: Response) => response.json());
     }
 }
