@@ -1,18 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA} from '@angular/core';
 
-
+import { MoviesListComponent } from './movies-list/movies-list.component';
+import { MovieService } from './services/movie.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { HttpModule } from '@angular/http';
+import { MovieAddComponent } from './movie-add/movie-add.component';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MoviesListComponent,
+    MovieAddComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule,
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
+  providers: [MovieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
