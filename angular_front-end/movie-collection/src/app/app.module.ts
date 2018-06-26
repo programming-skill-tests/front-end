@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { MovieAddComponent } from './movie-add/movie-add.component';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { SelectModule } from 'ng2-select';
 
 
 
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    SelectModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   providers: [MovieService],

@@ -1,0 +1,24 @@
+<body>
+  <h1>Movie Collection</h1>
+            <br>
+
+           <button type="button" (click)="addNew()">Add new</button>
+           <button style="background-color:#af1700" type="button" (click)="deleteSelected()">Delete</button>
+            <br>
+  <table style="width:60%">
+    <tr>
+        <th><input type="checkbox" id="selectAll" (click)="onSelectAll($event)"/></th>
+      <th>Movie</th>
+      <th>Director</th>
+      <th>Genre</th>
+      <th>Cast</th>
+    </tr>
+    <tr *ngFor="let d of data">
+      <td><input id="{{d.id}}" type="checkbox" (click)="onSelectCheckbox($event)"/></td>
+      <td>{{d.name}}</td>
+      <td>{{d.director}}</td>
+      <td>{{d.genre}}</td>
+      <td>{{d.cast}}</td>
+    </tr>
+  </table>
+</body>

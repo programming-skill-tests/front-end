@@ -1,0 +1,27 @@
+<div style="width:50%;height:50%;align:centre">
+<form id="simpleInputForm">
+    <label>Title :</label>
+    <input type="text" name="name" [(ngModel)]="movieWrapperData.name" />
+    <br>
+    <label>Director :</label>
+    <select id="director" (change)="onDirectorChange()"><option value="0">---SELECT---</option></select>
+    <br>
+    <label>Cast :</label>
+    <textarea id="cast" name="cast"  [(ngModel)]="movieWrapperData.cast" rows="5"></textarea>
+    <br>
+    <label>Genre :</label>
+    <br>
+    <br>
+    <label class="container">Action
+    <input type="radio" name="genre" value="Action" [(ngModel)]="movieWrapperData.genre"> <span class="checkmark"></span></label><br>
+    <label class="container">Comedy
+    <input type="radio" name="genre" value="Comedy" [(ngModel)]="movieWrapperData.genre"> <span class="checkmark"></span></label><br>
+    <label class="container">Drama
+    <input type="radio" name="genre" value="Drama" [(ngModel)]="movieWrapperData.genre"> <span class="checkmark"></span></label><br>
+    <label class="container">Horror
+    <input type="radio" name="genre" value="Horror" [(ngModel)]="movieWrapperData.genre"> <span class="checkmark"></span></label><br>
+    <br>
+    <button type="button" (click)="addMovie()">Save</button>
+    <button style="background-color:#af1700" type="button" (click)="cancel()">Cancel</button>
+</form>
+</div>
