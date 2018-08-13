@@ -1,0 +1,47 @@
+html {
+	height: 100%;
+}
+
+body {
+	background-color: #f2f2f2;
+}
+
+.bg-nav {
+	background-color: #7e4de4;
+}
+
+.logo {
+	/*background-image: url(logo.png);*/
+	width: 200px;
+}
+
+.navbar ul {
+	list-style: none;
+	margin: 0px;
+}
+
+.navbar ul li {
+	float: left;
+	margin-left: 30px;
+}
+
+.navbar ul li a{
+	color: #fff;
+	font-variant-caps: small-caps;
+}
+
+.navbar ul li a:hover {
+	text-decoration: none;
+}
+
+.card {
+	border-radius: 0px;
+}
+
+.col-12 {
+	margin-top: 15px;
+}
+
+.btn {
+	border-radius: 30px;
+}
