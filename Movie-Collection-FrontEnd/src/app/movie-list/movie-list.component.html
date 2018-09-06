@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1 style="text-align: center;color:teal">Movies List</h1>
+<br/><br/> <br/><br/> <br/><br/>
+<div class="container ">
+  <button type="button" class="btn btn-primary" (click)="addNew()">Add New</button>
+  <button type="button" class="btn btn-danger" (click)="deleteSelected()">Delete</button>
+  <br/><br/>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th bgcolor="#404040
+      " class="text-center"><div class="checkbox">
+        <label><input type="checkbox" (click)="onSelectAll($event)"></label>
+      </div></th>
+      <th  bgcolor="#404040
+      "  class="text-center"><span style="color:white">Movie</span></th>
+      <th  bgcolor="#404040
+      " class="text-center"><span style="color:white">Director</span></th>
+      <th bgcolor="#404040
+      " class="text-center"><span style="color:white">Genre</span></th>
+      <th bgcolor="#404040
+      " class="text-center"><span style="color:white">Cast</span></th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of data">
+            <td class="text-center"><div class="checkbox"><label>
+              <input id="{{movie.id}}" type="checkbox" (click)="onSelectCheckbox($event)"/></label></div></td>
+            <td>{{movie.Title}}</td>
+            <td>{{movie.Director}}</td>
+            <td>{{movie.Genre}}</td>
+            <td>{{movie.Cast}}</td>
+          </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

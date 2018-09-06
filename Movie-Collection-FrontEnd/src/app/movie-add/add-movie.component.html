@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container" style="background-image: url(https://steemitimages.com/DQmVaeqGAQMoE7iwdXBx2JYFyNj8JfWUQJNJ7yDTQRkx9kv/Movies%20to%20be%20released%20in%202018.jpg)">
+    <h2>
+      <span style="color:slategray">ADD MOVIE DEATAILS HERE...
+        <hr>
+      </span>
+    </h2>
+    <br/>
+    <form class="col-sm-5">
+      <div class="form-group">
+        <label for="title" style="color:white">Title</label>
+        <input type="text" class="form-control" placeholder="Title" name="title" [(ngModel)]="movieinfo.title">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleSelect1" style="color:white">Director</label>
+        <select class="form-control" id="director" name="director" [(ngModel)]="movieinfo.director">
+          <option value="0">--Select--</option>
+          <option value="Rajkumari Hirani">Rajkumari Hirani</option>
+          <option value="Yograj Bhat">Yograj Bhat</option>
+          <option value="Rajamoli">Rajamoli</option>
+          <option value="kjhkj">kkhkjh</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea2" style="color:white">Cast</label>
+        <textarea class="form-control rounded-0" id="cast" rows="3" placeholder="Please Type Here..." name="cast" [(ngModel)]="movieinfo.cast"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea2" style="color:white"> Genre</label>
+        <br/>
+        <div class="container">
+          <input type="radio" name="group1" id="radio-1" name="genre" [(ngModel)]="movieinfo.genre" value="Action">
+          <label for="radio-1">
+            <span class="radio" style="color:rgb(59, 160, 207)">Action</span>
+          </label>
+        </div>
+        <div class="container">
+          <input type="radio" name="group1" id="radio-2" name="genre" [(ngModel)]="movieinfo.genre" value="comedy">
+          <label for="radio-2">
+            <span class="radio" style="color:rgb(59, 160, 207)">Comedy</span>
+          </label>
+        </div>
+        <div class="container">
+          <input type="radio" name="group1" id="radio-3" name="genre" [(ngModel)]="movieinfo.genre" value="Drama">
+          <label for="radio-3">
+            <span class="radio" style="color:rgb(59, 160, 207)">Drama</span>
+          </label>
+        </div>
+        <div class="container">
+          <input type="radio" name="group1" id="radio-4" name="genre" [(ngModel)]="movieinfo.genre" value="Horror">
+          <label for="radio-4">
+            <span class="radio" style="color:rgb(59, 160, 207)">Horror</span>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <button type="button" class="btn btn-danger" (click)="cancel()">Cancel</button>&nbsp;
+        <button type="button" class="btn btn-success" (click)="addMovie()">Save</button>
+      </div>
+    </form>
+    <br/>
+    <br/>
+  </div>
+
+</body>
+
+</html>
