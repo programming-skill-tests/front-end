@@ -2,12 +2,10 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import { MovieModel } from '../models/movieModel';
+
 @Injectable()
 export class MovieService {
-    headers: any;
     constructor(private http: Http) {
-        this.headers = new Headers();
-        this.headers.append('Content-Type', 'application/json');
     }
 
     getMoviesList() {
@@ -18,18 +16,18 @@ export class MovieService {
                 console.log("error" + error.json());
                 return Observable.throw(error.json());
             });
-            
+
 
     }
-    addNewMovieDetails(movieModel: MovieModel) {
-        return this.http.post('/api/movies/add', movieModel)
+    addNewMovie(movieModel: MovieModel) {
+        return this.http.post('http://localhost:8081/api/movies/add', movieModel)
             .map(res => <String>res.json())
             .catch(res => {
                 return "Error";
             });
     }
     deleteSelectedMovies(deleteSelection: String): Observable<MovieModel> {
-        return this.http.post('/api/movies/delete', deleteSelection)
+        return this.http.post('http://localhost:8081/api/movies/delete', deleteSelection)
             .map((res: Response) => res.json()
             ).catch((error: MovieModel) => Observable.throw('Error'));
     }
